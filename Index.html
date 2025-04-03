@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험 답 찍기</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">시험 답 찍기</p>
+    <button onclick="showRandomMessage()">확인</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "아니 진짜 1번 이라니까",
+                "2은 가끔 나왔었잖아",
+                "3은 정배지",
+                "정답은 언제나 4번",
+                "5번 생각보다 많다."
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
